@@ -22,6 +22,7 @@ if (other.gameObject.name != "Player"){
     return;
 }
 Destroy(gameObject);
+FuelMeter.fuel = FuelMeter.fuel + 10;
    }
    
 
