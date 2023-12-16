@@ -22,7 +22,12 @@ if (other.gameObject.name != "Player"){
     return;
 }
 Destroy(gameObject);
-FuelMeter.fuel = FuelMeter.fuel + 10;
+
+if(FuelMeter.fuel + 5>= 100){
+
+}
+else{FuelMeter.fuel = FuelMeter.fuel + 5;}
+
    }
    
 
