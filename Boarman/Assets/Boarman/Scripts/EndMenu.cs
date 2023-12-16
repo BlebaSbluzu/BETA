@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; 
 using TMPro;
+
 public class EndMenu : MonoBehaviour
 {
     
-public static String DeathTextString;
-    public TMP_Text DeathText;
+
 
     
+    public TMP_Text deathText;
 
 void OnCollisionEnter(Collision collision)
 {
@@ -19,18 +19,38 @@ void OnCollisionEnter(Collision collision)
 
 if (collision.gameObject.tag == "Player")
 {
-SceneManager.LoadScene(1);
-DeathTextString = "You crashed";
-DeathText.SetText("You crashed");
+SceneManager.LoadScene(3);
+// DeathText.DeathTextString = "You crashed";
+deathText.SetText("You Crashed");
+Debug.Log(  "\n" + startmenu.LEVEL + "\n");
 Timer.TimeUsed = 0;
 }
 
 }
+
+
+
  public void RestartGame(){
    Timer.TimeUsed = 0;
 FuelMeter.fuel = 100;
 PlayerController.speed = 15;
-    SceneManager.LoadScene(1);
-    DeathTextString="dsb";
+    SceneManager.LoadScene(startmenu.LEVEL);
+
  }
+
+// public void FuelText(){
+//         if (FuelMeter.fuel <= 0)
+//         {
+//             // DeathText.DeathTextString = "You Ran out of Fuel";
+//             deathText.SetText("You ran out of fuel");
+            
+            
+//         }
+//     }
+
+// void LateUpdate(){
+// FuelText();
+
+// }
+
 }
