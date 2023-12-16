@@ -16,7 +16,8 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
+            Timer.TimeUsed = 0;
         }
     }
     // Update is called once per frame
