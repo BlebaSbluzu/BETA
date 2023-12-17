@@ -9,8 +9,6 @@ public class EndMenu : MonoBehaviour
 {
     
 
-
-    
     public TMP_Text deathText;
 
 void OnCollisionEnter(Collision collision)

@@ -6,9 +6,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Numerics;
 
 public class PlayerController : MonoBehaviour
 {
+
+// public static UnityEngine.Vector3 Player;
 
     bool alive = true;
 
@@ -44,6 +47,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         Debug.Log(speed);
+        print(gameObject.name);
         return speed;
     }
     // Start is called before the first frame update
@@ -54,9 +58,10 @@ public class PlayerController : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (transform.position.y < -5)
+        if (transform.position.y < -3)
         {
           SceneManager.LoadScene(5)   ;
+          SceneManager.LoadScene(3)   ;
         }
     }
 
@@ -74,10 +79,27 @@ public class PlayerController : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");
 
-        transform.Translate(Vector3.forward * speedHandler() * Time.deltaTime);
+        transform.Translate(UnityEngine.Vector3.forward * speedHandler() * Time.deltaTime);
 
-        transform.Rotate(Vector3.up * turnspeed * Time.deltaTime * horizontalInput);
+        transform.Rotate(UnityEngine.Vector3.up * turnspeed * Time.deltaTime * horizontalInput);
 
+
+if(GroundSpawner.showEnd == true){
+}
+
+    if (transform.position.z >= GroundSpawner.EndPoint.z+10){
+
+
+        if(startmenu.LEVEL ==1){
+        SceneManager.LoadScene(4);
+
+        }
+        else{
+        SceneManager.LoadScene(5);
+
+        }
+
+    }
 
     }
 
