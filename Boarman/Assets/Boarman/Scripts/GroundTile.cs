@@ -9,8 +9,11 @@ public class NewBehaviourScript : MonoBehaviour
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
         SpawnObstacle();
-        SpawnCoins();
         
+        SpawnCoins();
+        if(startmenu.LEVEL ==2){
+            SpawnObstacle();
+        }
     }
 
     private void OnTriggerExit(Collider other)
