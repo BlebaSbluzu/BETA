@@ -19,7 +19,7 @@ void OnCollisionEnter(Collision collision)
 
 if (collision.gameObject.tag == "Player")
 {
-SceneManager.LoadScene(3);
+SceneManager.LoadScene(5);
 // DeathText.DeathTextString = "You crashed";
 deathText.SetText("You Crashed");
 Debug.Log(  "\n" + startmenu.LEVEL + "\n");
