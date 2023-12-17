@@ -48,4 +48,10 @@ public class startmenu : MonoBehaviour
    }
 
 
+
+   public void source(){
+       Application.OpenURL("https://github.com/BlebaSbluzu/BETA.git");
+
+   }
+
 }
