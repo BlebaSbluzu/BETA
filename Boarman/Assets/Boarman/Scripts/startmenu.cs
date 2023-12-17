@@ -13,15 +13,15 @@ public class startmenu : MonoBehaviour
       SceneManager.LoadScene(1);
     }
    public void startGame(){
-<<<<<<< HEAD
+// <<<<<<< HEAD
 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 SceneManager.LoadScene(2);
-=======
+// =======
 // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-SceneManager.LoadScene(1);
+// SceneManager.LoadScene(1);
 
-Debug.Log(SceneManager.GetActiveScene().buildIndex + 1 + "\n");
->>>>>>> main
+// Debug.Log(SceneManager.GetActiveScene().buildIndex + 1 + "\n");
+// >>>>>>> main
 
 LEVEL = 1;
 FuelMeter.fuel = 100;
@@ -33,13 +33,13 @@ PlayerController.speed = 15;
    }
 
       public void startGame2(){
-<<<<<<< HEAD
+// <<<<<<< HEAD
 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
 SceneManager.LoadScene(4);
-=======
-// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-SceneManager.LoadScene(2);
->>>>>>> main
+// =======
+// // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+// SceneManager.LoadScene(2);
+// >>>>>>> main
 
 LEVEL = 2;
 FuelMeter.fuel = 100;
