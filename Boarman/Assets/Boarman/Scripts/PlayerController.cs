@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     bool alive = true;
 
+
+    public static bool generatescore = false;
     private float turnspeed = 45.0f;
     private float horizontalInput;
 
@@ -60,8 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y < -3)
         {
-          SceneManager.LoadScene(5)   ;
-          SceneManager.LoadScene(3)   ;
+          SceneManager.LoadScene(7)   ;
         }
     }
 
@@ -91,13 +92,15 @@ if(GroundSpawner.showEnd == true){
 
 
         if(startmenu.LEVEL ==1){
-        SceneManager.LoadScene(4);
-
+        SceneManager.LoadScene(3);
+generatescore = true;
         }
         else{
-        SceneManager.LoadScene(5);
-
+        SceneManager.LoadScene(6);
+generatescore = true;
         }
+
+        
 
     }
 
@@ -112,29 +115,8 @@ if(GroundSpawner.showEnd == true){
     void Restart(){
 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
+
+
     }
    
    
-   
-//     public TextMeshProUGUI gameOverText;
-// public Button restartButton; 
-// public bool isGameActive;
-
-
-
-// public void GameOver()
-//     {
-//         gameOverText.gameObject.SetActive(true);
-//         restartButton.gameObject.SetActive(true);
-//         isGameActive = false;
-//     }
-
-//     // Restart game by reloading the scene
-//     public void RestartGame()
-//     {
-//         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-//         Debug.Log("penis");
-//     }
-
-// }

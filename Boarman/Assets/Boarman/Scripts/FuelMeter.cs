@@ -55,7 +55,7 @@ public class FuelMeter : MonoBehaviour
         if (fuel <= 0)
         {
             // DeathText.DeathTextString = "You Ran out of Fuel";
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(7);
             
             
         }
