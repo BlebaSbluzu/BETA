@@ -16,7 +16,7 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(7);
             Timer.TimeUsed = 0;
         }
     }
