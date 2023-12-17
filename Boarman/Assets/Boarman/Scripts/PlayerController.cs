@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y < -3)
         {
+          SceneManager.LoadScene(5)   ;
           SceneManager.LoadScene(3)   ;
         }
     }
