@@ -13,7 +13,7 @@ public int numberOfTilesToSpawn = 10;
 
 public static Boolean levelEnding = false;
 
-int LevelLength = 8;
+int LevelLength = 16;
 
 
 
